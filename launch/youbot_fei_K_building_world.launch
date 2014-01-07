@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find fei_gazebo)/launch/start.launch">
+   <arg name="world" value="$(find fei_gazebo)/worlds/fei_K_building.world"/> 
+  </include>
+
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <arg name="name" default="youbot"/>
+  <arg name="pos_x" default="0.0"/>
+  <arg name="pos_y" default="0.0"/>
+  <arg name="pos_z" default="3.0"/>
+  <arg name="namespace_arg" default=""/>
+
+  <arg name="youbot_model" default="$(find youbot_description)/robots/youbot.urdf.xacro" />
+  <param name="youbot_description" command="$(find xacro)/xacro.py '$(arg youbot_model)'" />
+
+  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
+    args="-param youbot_description
+    -urdf
+    -x $(arg pos_x)
+    -y $(arg pos_y)
+    -z $(arg pos_z)
+    -model $(arg name)"
+    respawn="false" output="screen">
+  </node>
+
+<!--  
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="30.0" />
+  </node>
+-->
+</launch>
