@@ -33,22 +33,22 @@
             <direction>0 0 -1</direction>
             <cast_shadows>false</cast_shadows>
         </light>
-        <model name="large_building">
+        <model name="14storey">
             <static>true</static>
-            <link name="large_building_link">
+            <link name="14storey_link">
                 <pose>0 0 2.35 0 0 0</pose>
-                <collision name="large_building_collision">
+                <collision name="14storey_collision">
                     <geometry>
                         <mesh>
-                            <uri>file://LargeBuilding.dae</uri>
+                            <uri>file://14storey.dae</uri>
                             <scale>1 1 1</scale>
                         </mesh>
                     </geometry>
                 </collision>
-                <visual name="large_building_visual">
+                <visual name="14storey_visual">
                     <geometry>
                         <mesh>
-                            <uri>file://LargeBuilding.dae</uri>
+                            <uri>file://14storey.dae</uri>
                             <scale>1 1 1</scale>
                         </mesh>
                     </geometry>
