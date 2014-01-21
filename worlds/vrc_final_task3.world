@@ -188,18 +188,39 @@
     <include>
       <uri>model://construction_barrel</uri>
       <name>barrel_1</name>
-      <pose>30 -1.0 0 0 0 0</pose>
+      <pose>23.13 1.8 0 0 0 0</pose>
     </include>
+
     <include>
       <uri>model://construction_barrel</uri>
       <name>barrel_2</name>
-      <pose>60 1.2 0 0 0 0</pose>
+      <pose>45.95 -1.67 0 0 0 0</pose>
     </include>
+
     <include>
       <uri>model://construction_barrel</uri>
       <name>barrel_3</name>
-      <pose>108 5 0 0 0 0</pose>
+      <pose>52.89 -1.71 0 0 0 0</pose>
     </include>
+
+    <include>
+      <uri>model://construction_barrel</uri>
+      <name>barrel_4</name>
+      <pose>106.51 10 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://construction_barrel</uri>
+      <name>barrel_5</name>
+      <pose>127 24 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://construction_barrel</uri>
+      <name>barrel_6</name>
+      <pose>153 97 0 0 0 0</pose>
+    </include>
+
     <include>
       <uri>model://speed_limit_sign</uri>
       <name>speed_sign_1</name>
@@ -248,29 +269,30 @@
       <static>true</static>
       <pose>200.15 103 3.75 0 0 1.5707</pose>
     </include>
+
     <include>
       <uri>model://starting_pen</uri>
       <static>true</static>
-      <pose>-11 8.0 0.0 0 0 3.1415</pose>
+      <pose>-10 7.0 0.0 0 0 3.1415</pose>
     </include>
 
     <include>
       <uri>model://gate</uri>
       <name>gate_0</name>
       <static>true</static>
-      <pose>-11 -1 2.0 0 0 -1.5707</pose>
+      <pose>-10 -2 2.0 0 0 -1.5707</pose>
     </include>
     <include>
       <uri>model://gate_number_1</uri>
       <name>gate_number_1_a</name>
       <static>true</static>
-      <pose>-8.85 -1 3.75 0 0 1.5707</pose>
+      <pose>-7.85 -2 3.75 0 0 1.5707</pose>
     </include>
     <include>
       <uri>model://gate_number_1</uri>
       <name>gate_number_1_b</name>
       <static>true</static>
-      <pose>-13.15 -1 3.75 0 0 1.5707</pose>
+      <pose>-12.15 -2 3.75 0 0 1.5707</pose>
     </include>
 
     <include>
@@ -357,7 +379,7 @@
     <include>
       <uri>model://house_3</uri>
       <name>house_3_b</name>
-      <pose> 104.780273 18.443701 0 0 0 .78539</pose>
+      <pose>104.780273 18.443701 0 0 0 .78539</pose>
     </include>
     <include>
       <uri>model://house_3</uri>
@@ -624,31 +646,6 @@
 -->
       </link>
     </model>
-
-    <plugin filename="libVRCPlugin.so" name="vrc_plugin">
-      <atlas>
-         <model_name>atlas</model_name>
-         <pin_link>utorso</pin_link>
-      </atlas>
-      <drc_vehicle>
-        <model_name>drc_vehicle</model_name>
-        <seat_link>polaris_ranger_ev::chassis</seat_link>
-      </drc_vehicle>
-      <drc_fire_hose>
-        <fire_hose_model>fire_hose</fire_hose_model>
-        <coupling_link>coupling</coupling_link>
-        <standpipe_model>standpipe</standpipe_model>
-        <spout_link>standpipe</spout_link>
-        <thread_pitch>-1000</thread_pitch>
-        <coupling_relative_pose>
-          1.17038e-05 -0.125623 0.35 -0.0412152 -1.57078 1.61199
-        </coupling_relative_pose>
-      </drc_fire_hose>
-    </plugin>
-
-    <plugin filename="libVRCScoringPlugin.so" name="vrc_scoring">
-      <score_file>/tmp/vrc_final_task1/score.log</score_file>
-    </plugin>
 
   </world>
 </sdf>

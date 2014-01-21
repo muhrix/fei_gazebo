@@ -5,6 +5,7 @@
       <ambient>0.5 0.5 0.5 1</ambient>
       <background>0.5 0.5 0.5 1</background>
       <shadows>false</shadows>
+      <grid>false</grid>
     </scene>
     <physics type="ode">
       <gravity>0 0 -9.81</gravity>
@@ -24,7 +25,7 @@
       <max_step_size>0.001</max_step_size>
     </physics>
     <light type="directional" name="directional_light_1">
-      <pose>0 0 2.35 0 0 0</pose>
+      <pose>0 0 50.0 0 0 0</pose>
       <diffuse>1 1 1 1</diffuse>
       <specular>1 1 1 1</specular>
       <attenuation>
