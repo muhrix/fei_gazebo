@@ -310,11 +310,12 @@
       <static>true</static>
       <pose>190 103.65 3.75 0 0 0</pose>
     </include>
-
+<!--
     <include>
       <uri>model://drc_vehicle</uri>
       <pose>0 0 0 0 0 0</pose>
     </include>
+-->
     <include>
       <uri>model://house_1</uri>
       <pose>12 9.5 0 0 0 0</pose>
@@ -624,7 +625,7 @@
 -->
       </link>
     </model>
-
+<!--
     <plugin filename="libVRCPlugin.so" name="vrc_plugin">
       <atlas>
          <model_name>atlas</model_name>
@@ -649,6 +650,6 @@
     <plugin filename="libVRCScoringPlugin.so" name="vrc_scoring">
       <score_file>/tmp/vrc_final_task1/score.log</score_file>
     </plugin>
-
+-->
   </world>
 </sdf>
