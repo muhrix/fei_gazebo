@@ -332,11 +332,12 @@
       <static>true</static>
       <pose>190 103.65 3.75 0 0 0</pose>
     </include>
-
+<!--
     <include>
       <uri>model://drc_vehicle</uri>
       <pose>0 0 0 0 0 0</pose>
     </include>
+-->
     <include>
       <uri>model://house_1</uri>
       <pose>12 9.5 0 0 0 0</pose>
