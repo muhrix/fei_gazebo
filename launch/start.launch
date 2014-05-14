@@ -2,11 +2,21 @@
 
 <launch>
   <arg name="world" default=""/>
+  <arg name="paused" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="headless" default="false"/>
   <arg name="gui" default="true"/>
+  
+  <arg unless="$(arg debug)" name="script_type" value="gzserver"/>
+  <arg     if="$(arg debug)" name="script_type" value="debug"/>
+  <arg unless="$(arg paused)" name="command_arg1" value=""/>
+  <arg     if="$(arg paused)" name="command_arg1" value="-u"/>  
+  <arg unless="$(arg headless)" name="command_arg2" value=""/>
+  <arg     if="$(arg headless)" name="command_arg2" value="-r"/>  
   
   <param name="/use_sim_time" value="true" />
 
-  <node name="gazebo" pkg="gazebo_ros" type="gzserver" args="$(arg world)" respawn="false" output="screen"/>
+  <node name="gazebo" pkg="gazebo_ros" type="$(arg script_type)" args="$(arg command_arg1) $(arg command_arg2) $(arg world)" respawn="false" output="screen"/>
   
     <!-- start gui -->
   <group if="$(arg gui)">
